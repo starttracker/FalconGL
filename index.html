@@ -15,7 +15,7 @@
 
       // Load the GLTF file
       const loader = new THREE.GLTFLoader();
-      loader.load('Falcon9.gltf', (gltf) => {
+      loader.load('https://starttracker.github.io/FalconGL/Falcon9.gltf', (gltf) => {
         // Add the model to the scene
         scene.add(gltf.scene);
       }, undefined, (error) => {
