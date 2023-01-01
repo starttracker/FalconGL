@@ -1,33 +1,5 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Falcon 9 GLTF Viewer</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  </head>
-  <body>
-    <canvas id="model-canvas"></canvas>
-    <script>
-      // Set up the scene, camera, and renderer
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('model-canvas') });
-      renderer.setSize(window.innerWidth, window.innerHeight);
-
-      // Load the GLTF file
-      const loader = new THREE.GLTFLoader();
-      loader.load('https://starttracker.github.io/FalconGL/Falcon9.gltf', (gltf) => {
-        // Add the model to the scene
-        scene.add(gltf.scene);
-      }, undefined, (error) => {
-        console.error(error);
-      });
-
-      // Render the scene
-      function animate() {
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-      }
-      animate();
-    </script>
-  </body>
+<body>
+  <object data="Falcon9.dae" type="model/vnd.collada+xml" width="800" height="600"></object>
+</body>
 </html>
